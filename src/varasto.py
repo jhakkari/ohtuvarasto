@@ -1,11 +1,8 @@
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
         self.tilavuus = max(tilavuus, 0.0)
-
-        if alku_saldo < 0.0:
-            self.saldo = 0.0
-
         self.saldo = min(alku_saldo, tilavuus)
+        self.saldo = max(self.saldo, 0.0)
 
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
