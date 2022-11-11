@@ -6,7 +6,6 @@ class Varasto:
 
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
-        
 
     def lisaa_varastoon(self, maara):
         if maara < 0:
